@@ -112,6 +112,7 @@
 		@if ($theme == 'green')   { @return $green-dark; }
 		@if ($theme == 'teal')    { @return $teal-dark; }
 		@if ($theme == 'grey')    { @return $grey-600; }
+		@if ($theme == 'blue')    { @return $blue-dark; }
 	}
 }
 

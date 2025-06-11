@@ -22,7 +22,7 @@ fi
 SASSC_OPT="-M -t expanded"
 
 THEME_NAME=Nightfox
-THEME_VARIANTS=('' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-Grey')
+THEME_VARIANTS=('' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-Grey', '-Blue')
 COLOR_VARIANTS=('-Light' '-Dark')
 SIZE_VARIANTS=('' '-Compact')
 
@@ -281,6 +281,10 @@ while [[ $# -gt 0 ]]; do
 				themes+=("${THEME_VARIANTS[8]}")
 				shift
 				;;
+			blue)
+				themes+=("${THEME_VARIANTS[9]}")
+				shift
+				;;
 			all)
 				themes+=("${THEME_VARIANTS[@]}")
 				shift
@@ -489,6 +493,9 @@ theme_color() {
 			;;
 		-Grey)
 			theme_color='grey'
+			;;
+		-Blue)
+			theme_color='blue'
 			;;
 		esac
 		tweaks_temp
